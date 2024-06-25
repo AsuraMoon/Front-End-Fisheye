@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e16f2e5c21.js" crossorigin="anonymous"></script>
+    <title>Fisheye - photographe</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="assets/images/logo.png" class="logo" alt="Fisheye Home page">
+      </a>
+    </header>
+
+    <main id="main">
+      <div class="photograph_header">
+        <article class="contact_column" id="stat_column">
+        </article>
+        <article class="contact_column" id="contact_column">
+          <button class="contact_button" onclick="displayModal()" alt="Ouvrir la requête" aria-label="Ouvrir la requête">Contactez-moi</button>
+        </article>
+        <article class="contact_column" id="portrait_column">
+        </article>
+      </div>
+    </main>
+
+    <section id="contact_modal">
+			<article class="modal">
+				<header>
+          <h2>Contactez-moi</h2>
+          <img src="assets/icons/close.svg" onclick="closeModal()" alt="Fermer"/>
+        </header>
+				<form name="reserve" action="index.html" method="get" id="formData">
+					<div class="formData">
+            <label for="first">Prénom</label><br>
+            <input type="text" id="first" name="first" minlength="3" maxlength="15"/>
+					</div>
+					<div class="formData">
+						<label for="last">Nom</label>
+            <input type="text" id="last" name="last" minlength="3" maxlength="15"/>
+					</div>
+					<div class="formData">
+						<label for="email">Email</label>
+            <input type="email" id="email" name="email"/>
+					</div>
+					<div class="formData">
+						<label for="message">Votre Message</label>
+            <textarea class="text-control" type="text" id="message" name="message" minlength="3" maxlength="255"> </textarea>
+					</div>
+          <input class="contact_button" type="submit" value="Envoyer" id="submit"/>
+				</form>
+			</article>
+		</section>
+
+    <section id="remerciement">
+      <article id="remerciement_modal">
+        <header>
+          <h2>Merci de votre message</h2>
+          <img src="assets/icons/close.svg" onclick="closeRemerciementModal()" alt="Fermer"/>
+        </header>
+      </article>
+    </section>
+    
+    <article id="case">
+      <label for="caseSelect">Trier par</label>
+      <select id="caseSelect" label="Trier par" aria-label="Trier par" aria-labelledby="caseSelect">
+        <option value="date" class="case">Dates</option>
+        <option value="likes" class="case">Popularité</option>
+        <option value="title" class="case">Titre</option>
+      </select>
+    </article>
+
+    <section class="media_section"></section>
+    <script src="scripts/factories/media.js"></script>
+    <script src="scripts/factories/photographersSelf.js"></script>    
+    <script src="scripts/utils/contactForm.js"></script>
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/factories/lightbox.js"></script>
+  </body>
+</html>
