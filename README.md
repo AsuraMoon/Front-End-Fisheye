@@ -11,7 +11,7 @@ Application 100% front-end, sans framework ni back-end.
 
 ## Demo
 
-👉 https://asuramoon.github.io/Front-End-Fisheye/ *(si GitHub Pages activé)*
+👉 https://asuramoon.github.io/Fisheye/
 
 ---
 
